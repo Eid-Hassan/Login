@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login and Signup Form</title>
+</head>
+<body>
+    <div class="form-container">
+        <form id="loginForm" class="form">
+            <h2>Login</h2>
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" name="loginUsername" required>
+
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="loginPassword" required>
+
+            <button type="button" onclick="login()">Login</button>
+
+            <p>Don't have an account? <a href="#" onclick="showSignupForm()">Signup</a></p>
+        </form>
+
+        <form id="signupForm" class="form" style="display:none;">
+            <h2>Signup</h2>
+            <label for="signupName">Name:</label>
+            <input type="text" id="signupName" name="signupName" required>
+
+            <label for="signupAge">Age:</label>
+            <input type="number" id="signupAge" name="signupAge" required>
+
+            <label for="signupPhone">Phone:</label>
+            <input type="tel" id="signupPhone" name="signupPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890" required>
+
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" name="signupPassword" required>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <button type="button" onclick="signup()">Signup</button>
+
+            <p>Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
